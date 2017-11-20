@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2017-11-18 Tic-tac-toe</title>
+    
+</head>
+<body>
+   <style>
+        td {
+            width: 20px;
+            height: 20px;
+            border: 2px solid black;
+            text-align: center;
+            
+        }    
+    </style>
+    <script>
+        var area = [1,null,0,null,1,null,null,null,null];
+        
+        for (var i=0; i<area.length; i++) {
+            if (area[i]===1){
+                area[i]="X";
+                } else if (area[i]===0){
+                    area[i]="O";
+                } else {
+                    area[i]="";
+                }
+        }
+        
+        var table = "<table>";
+        for(var i=0; i < area.length; i=i+3) { 
+             table = table + "<tr><td>"+area[i]+"</td><td>"+area[i+1]+"</td><td>"+area[i+2]+"</td></tr>";
+        }
+        table=table+"</table>";
+        
+        document.write(table);
+    </script>
+</body>
+</html>

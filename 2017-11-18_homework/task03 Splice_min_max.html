@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2017-11-18 Splice_min_max</title>
+    
+</head>
+<body>
+    <script>
+        var arr = [12, 4, 3, 10, 1, 20];
+        alert('Дан массив: ' + arr);
+        
+        var min = arr[0];
+        for (i=1; i<arr.length; i++) {
+            if(min>arr[i])
+                min=arr[i];
+        }
+        alert ('Минимальное значение в массиве: '+ min);
+        var min_number = arr.indexOf(min);
+        arr.splice(min_number, 1);
+        
+        var max = arr[0];
+        for (i=1; i<arr.length; i++) {
+            if(max<arr[i])
+                max=arr[i];
+        }
+        alert ('Максимальное значение в массиве: ' + max);
+        var max_number = arr.indexOf(max);
+        arr.splice(max_number, 1);
+        
+        alert('Удалим минимальное и максимальные значения из массива и получим: ' + arr);
+    </script>
+</body>
+</html>
