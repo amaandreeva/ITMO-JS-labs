@@ -22,7 +22,9 @@
         var BC = Math.sqrt(Math.pow((x3-x2), 2)+Math.pow((y3-y2), 2)+Math.pow((z3-z2), 2));
         var CA = Math.sqrt(Math.pow((x1-x3), 2)+Math.pow((y1-y3), 2)+Math.pow((z1-z3), 2));
         
-        if (Math.pow(AB, 2)===Math.pow(BC, 2)+Math.pow(CA, 2) || Math.pow(BC, 2)===Math.pow(AB, 2)+Math.pow(CA, 2) || Math.pow(CA, 2)===Math.pow(BC, 2)+Math.pow(AB, 2)) {
+        if (parseInt(Math.pow(AB, 2))===parseInt(Math.pow(BC, 2))+parseInt(Math.pow(CA, 2)) || 
+            parseInt(Math.pow(BC, 2))===parseInt(Math.pow(AB, 2))+parseInt(Math.pow(CA, 2)) || 
+            parseInt(Math.pow(CA, 2))===parseInt(Math.pow(BC, 2))+parseInt(Math.pow(AB, 2))) {
             alert ('Треугольник с заданными координатами является прямоугольным.')
         } else {
             alert ('Увы, треугольник с заданными координатами не прямоугольный.')
