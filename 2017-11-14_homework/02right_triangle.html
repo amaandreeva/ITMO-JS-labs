@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>2017-11-14 Right triangle</title>
+</head>
+<body>
+    <script>
+        var x1 = parseInt(prompt('Задайте координату X для вершины А: ', ''));
+        var y1 = parseInt(prompt('Задайте координату Y для вершины A: ', ''));
+        var z1 = parseInt(prompt('Задайте координату Z для вершины A: ', ''));
+        
+        var x2 = parseInt(prompt('Задайте координату X для вершины B: ', ''));
+        var y2 = parseInt(prompt('Задайте координату Y для вершины B: ', ''));
+        var z2 = parseInt(prompt('Задайте координату Z для вершины B: ', ''));
+        
+        var x3 = parseInt(prompt('Задайте координату X для вершины C: ', ''));
+        var y3 = parseInt(prompt('Задайте координату Y для вершины C: ', ''));
+        var z3 = parseInt(prompt('Задайте координату Z для вершины C: ', ''));
+        
+        var AB = Math.sqrt(Math.pow((x2-x1), 2)+Math.pow((y2-y1), 2)+Math.pow((z2-z1), 2));
+        var BC = Math.sqrt(Math.pow((x3-x2), 2)+Math.pow((y3-y2), 2)+Math.pow((z3-z2), 2));
+        var CA = Math.sqrt(Math.pow((x1-x3), 2)+Math.pow((y1-y3), 2)+Math.pow((z1-z3), 2));
+        
+        if (Math.pow(AB, 2)===Math.pow(BC, 2)+Math.pow(CA, 2) || Math.pow(BC, 2)===Math.pow(AB, 2)+Math.pow(CA, 2) || Math.pow(CA, 2)===Math.pow(BC, 2)+Math.pow(AB, 2)) {
+            alert ('Треугольник с заданными координатами является прямоугольным.')
+        } else {
+            alert ('Увы, треугольник с заданными координатами не прямоугольный.')
+        }
+    </script>
+</body>
+</html>
