@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2017-11-23factorialRec</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt('Введите целое число: '));
+        
+        function factorial(n){
+            if (n===1) {
+                return 1;
+            } else {
+                return n*factorial(n-1);
+            }
+        }
+        
+        alert ('Факториал введенного числа равен: ' +factorial(n));
+    </script>
+</body>
+</html>
