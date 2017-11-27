@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var objStudent = {
+            name: 'Ivan',
+            surname: 'Ivanov',
+            age: '25',
+            placeOfStudy: 'ITMO',
+            interests: [
+                {
+                    type: 'film',
+                    description: 'Step up'
+                },
+                {
+                    type: 'music',
+                    description: 'hip-hop'
+                },
+                {
+				    type: 'color',
+				    description: 'green'
+                }
+            ]
+        };
+        
+        console.log("\nОбъект студент:");
+        
+        for (var key in objStudent) {
+            if (typeof objStudent[key] == "object" && objStudent[key].length > 0) {
+                console.log("Свойство " + key + " содержит массив из " + objStudent[key].length + " элементов");
+                for (var i = 0; i < objStudent[key].length; i++) {
+                    console.log("Элемент №" + i + " содержит следующие свойства:");
+                    for(var j in objStudent[key][i])
+                    {
+                        console.log("Свойство " + j + " содержит " + objStudent[key][i][j]);
+                    }
+                }
+            } else {
+                console.log("Свойство " + key + " содержит " + objStudent[key]);
+            }
+        };
+    </script>
+</body>
+</html>

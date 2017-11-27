@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrA = [1, 2, 2, 3, 3, 55, 8, 3, 22];
+        var arrB = [14, 2, 1, 44, 8, 55, 3, 2, 7];
+        
+        var arrC = arrA.concat(arrB);
+        
+        for(var i = 0; i < arrC.length; i++){
+            for(var j = i; j < arrC.length - 1; j++){
+                if(arrC[i] === arrC[j+1]){
+                    arrC.splice(j+1,1);
+                    j = j - 1;
+                }
+            }
+        }
+        
+        alert(arrC);
+    </script>
+</body>
+</html>
