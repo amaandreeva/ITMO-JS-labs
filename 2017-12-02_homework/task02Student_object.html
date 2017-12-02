@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function ObjHuman () {
+            this.name = 'Иван';
+            this.age = 25;
+            this.sex = 'м.';
+            this.interests = [ "музыка" , "программирование"];
+            this.informationStudent = function (){
+                console.log("Человек: " + this.name + ". Возраст: " + 
+                            this.age + " лет. " + "Пол: " + this.sex + " Интересы: " + this.interests[0] + ", " + this.interests[1] + ".");
+            }
+        }
+        
+        var objHuman1 = new ObjHuman();
+        objHuman1.informationStudent();
+        
+        function ObjStudent () {
+            var student = new ObjHuman();
+            student.institute = 'ИТМО';
+            student.informationStudent = function (){
+                console.log("Студент: " + student.name + ". Возраст: " + 
+                            student.age + " лет. " + "Пол: " + student.sex + " Интересы: " + student.interests[0] + ", " + student.interests[1] + ". Обучается в " + student.institute + ".");
+            }
+            return student;
+        }
+        
+        var objStudent1 = new ObjStudent();
+        objStudent1.informationStudent();
+    </script>
+</body>
+</html>
