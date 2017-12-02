@@ -1,0 +1,57 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		function Prod(name, price){
+			this.name = name;
+			this.price = price;
+		}
+		
+		function Basket(){
+			var arrProds = [];
+			
+			this.arrProds = arrProds;
+			this.setProds = function(prod1,prod2){
+				arrProds = arrProds.push(prod1,prod2);
+			}
+			
+            this.getProds = function(){
+				return arrProds;
+			}
+			
+			this.sumAllProds = function(arrProds){
+				var arrProds = basket.arrProds;
+				var sumProdsTest = 0;
+					for(i = 0; i < arrProds.length; i++){
+						for(var key in arrProds[i]){
+							if(key === 'price' ){
+								sumProdsTest += arrProds[i].price;
+							}
+						}
+					}
+				return sumProdsTest ;
+			}	
+			
+			this.numbersOfProds = function(arrProds){
+				var arrProds = basket.arrProds;
+
+				return arrProds.length ;
+			}	
+		}
+		
+        
+            var prod1 = new Prod('яблоки', 110);
+            var prod2 = new Prod('груши', 90);
+			
+            var basket = new Basket();
+			basket.setProds(prod1, prod2);
+			
+            alert("Сумма товаров равна: " + basket.sumAllProds());
+			alert("Количество товаров: " + basket.numbersOfProds());
+
+	</script>
+</body>
+<footer></footer>
+</html>
