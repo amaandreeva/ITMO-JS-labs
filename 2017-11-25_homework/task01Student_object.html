@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var objStudent = {
+            name: 'Иван',
+            surname: 'Иванов',
+            age: '25',
+            placeOfStudy: 'ITMO',
+            interests: [
+                {
+                    type: 'film',
+                    description: 'комедии'
+                },
+                {
+                    type: 'music',
+                    description: 'hip-hop'
+                },
+                {
+				    type: 'hobby',
+				    description: 'программирование'
+                }
+            ],
+            InformationStudent: function (){
+                console.log(this.name + " " + this.surname + ". " + this.age + " лет. " + "Интересы: " + this.interests[0].description + ", " + this.interests[1].description + ", " + this.interests[2].description + ". Учится в " + this.placeOfStudy + ".");
+            }
+        };
+        
+        objStudent.InformationStudent();
+    </script>
+</body>
+</html>
