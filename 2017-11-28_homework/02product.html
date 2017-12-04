@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+2. Создать объект «Товар» включающий:
+- свойства, такие как фото, артикул, 
+описание и т.п.;
+- метод, которому при вызове передается 
+id пустого div элемента и в этот html 
+элемент данный метод создаст и внесёт 
+все необходимые html элементы, стили, 
+и содержание для отображения 
+всей информации хранящихся в свойствах 
+объекта о данном товаре. Дизайн оформления 
+информации в html о товаре – 
+это ваше творчество.
+-->
+    <div id="product"></div>
+       
+    <script>
+        function createProduct (){
+            var car = document.getElementById('product');
+            car.style.width = '300px';
+            car.style.height = '400px';
+            car.style.border = '5px dotted black';
+            car.style.padding = '10px';
+            car.innerHTML = '<img src="02product_pics/nissan.png" width="290px" height="auto"><h3>NISSAN TORRANO</h3><p>Артикул: 654729</p><p>Штурмуйте бездорожье, отправляйтесь за покупками или в дальнее путешествие — NISSAN TERRANO выполнит любые задачи эффективно и с комфортом для всех пассажиров.</p>';
+        }
+        
+        createProduct();
+    </script>
+</body>
+</html>

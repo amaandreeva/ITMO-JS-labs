@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .traff_light {
+            width: 100px;
+            height: 300px;
+            background-color: darkslategrey;
+        }
+        .grey {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: grey;
+        }
+        .red {
+            background-color: red;
+            visibility: hidden;
+        }
+        .yellow{
+            background-color: yellow;
+            visibility: hidden;
+        }
+        .green {
+            background-color: green;
+            visibility: hidden;
+        }
+        .on {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<!--
+3. Создать светофор (красный, желтый, 
+зелёный). Переключать цвет у светофора 
+через каждые 2 сек сверху вниз и снизу вверх. 
+-->
+    <div class="traff_light">
+        <div class="grey red" id="red"></div>
+        <div class="grey yellow" id="yellow"></div>
+        <div class="grey green" id="green"></div>
+    </div>
+    
+    <script>
+        var red = document.getElementById('red');
+        var yellow = document.getElementById('yellow');
+        var green = document.getElementById('green');
+        
+        function traffLightOn(){
+            red.classList.add('on');
+            
+            function redToYellow(){
+                red.classList.remove('on');
+                yellow.classList.add('on');
+            } 
+            setTimeout(redToYellow, 4000);
+            
+            function yellowToGreen (){
+                yellow.classList.remove('on');
+                green.classList.add('on');
+            }
+            setTimeout(yellowToGreen, 5000);
+            
+            function greenToYellow (){
+                green.classList.remove('on');
+                yellow.classList.add('on');
+            }
+            setTimeout(greenToYellow, 9000);
+            
+            function yellowOff(){
+                yellow.classList.remove('on');
+            }
+            setTimeout(yellowOff, 10000)
+        };
+        
+        function traffLightOnRepeat (){
+                setInterval(traffLightOn, 10000)
+        };
+        
+        traffLightOn();
+        traffLightOnRepeat();
+    </script>
+</body>
+</html>

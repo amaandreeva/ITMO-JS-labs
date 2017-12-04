@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--
+1. Создать функцию которая выводит время 
+в html и обновляет значения каждую секунду. 
+Время выводить в формате чч:мм:cc, при этом 
+часы, минуты и секунды отобразить разными цветами. 
+-->
+    <div id="clock"></div>
+       
+    <script>
+        var divClock = document.getElementById('clock');
+        
+        function getClock (){
+            var date = new Date();
+            
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            
+            var zero_s = "0";
+            if(seconds>=10) {
+                zero_s = "";
+            }
+            var zero_m = "0";
+            if(minutes>=10) {
+                zero_m = "";
+            }
+            var zero_h = "0";
+            if(hours>=10) {
+                zero_h = "";
+            }
+            
+            divClock.innerHTML = '<span style="color: orange">' + zero_h + hours + '</span> : <span style="color: pink">' + zero_m + minutes + '</span> : <span style="color: red">' + zero_s + seconds + '</span>';
+        }
+        
+        setInterval (getClock, 1000);  
+    </script>
+</body>
+</html>
