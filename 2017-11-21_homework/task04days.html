@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+			var number = prompt('Введите количество дней (целое число больше или равное 0):');
+			
+            function getDays(number) {
+                var regExp1 = /\d{1}$/ig; 
+				var oneLastNumb = +(number.match(regExp1));
+							
+				var regExp2 = /\d{2}$/ig; 
+				var twoLastNumb = +(number.match(regExp2));
+				
+				if(oneLastNumb === 0 || oneLastNumb >= 5 && oneLastNumb <= 9 || twoLastNumb >= 11 && twoLastNumb <= 14){
+                    alert(number + ' дней');
+                } else if (oneLastNumb === 1){
+                    alert(number + ' день');
+                } else if (oneLastNumb >= 2 && oneLastNumb <= 4){
+                    alert(number + ' дня');
+                } 
+			}
+            
+			getDays(number);
+		</script>
+</body>
+</html>
