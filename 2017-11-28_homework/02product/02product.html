@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!--
@@ -19,19 +20,8 @@ id пустого div элемента и в этот html
 информации в html о товаре – 
 это ваше творчество.
 -->
-    <div id="product"></div>
+    <div id="car_torrano" class="card"></div>
        
-    <script>
-        function createProduct (){
-            var car = document.getElementById('product');
-            car.style.width = '300px';
-            car.style.height = '400px';
-            car.style.border = '5px dotted black';
-            car.style.padding = '10px';
-            car.innerHTML = '<img src="02product_pics/nissan.png" width="290px" height="auto"><h3>NISSAN TORRANO</h3><p>Артикул: 654729</p><p>Штурмуйте бездорожье, отправляйтесь за покупками или в дальнее путешествие — NISSAN TERRANO выполнит любые задачи эффективно и с комфортом для всех пассажиров.</p>';
-        }
-        
-        createProduct();
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
