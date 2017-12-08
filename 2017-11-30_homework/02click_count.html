@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<!--   2. Реализовать счётчик нажатий на кнопку: Дана кнопка внутри неё записана цифра. При клике на кнопку – её значение должно увеличиваться на единицу.-->
+   <p>Кнопка-счетчик:</p>
+    <input type="button" id="button" value="0" style="width: 120px; height: 30px; background-color: coral;">
+    <script>
+        function countButton(){
+            var pressButton = 1;
+            return function (){
+                return pressButton++;
+            }
+        }
+        
+        var counter = countButton();
+        var button = document.getElementById('button');
+        
+        button.onclick = function () {
+            button.setAttribute('value', counter());
+        };
+    </script>
+</body>
+</html>
